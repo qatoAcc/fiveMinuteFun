@@ -78,26 +78,8 @@ g<!DOCTYPE html>
         }
          var msg = document.getElementById("msg").textContent += message;
              };
-        var onButtonClickTwo = function() {
-            var messageTwo;
-            if(selectPath === opDef){
-            messageTwo = "how u supposed to have a kid if you dont have a life???";
-        } else if(selectPath === opOne){
-            messageTwo = "you didnt have one :(";
-        } else if(selectPath === opTwo){
-            messageTwo = "you cant play as a tree :c";
-        } else if(selectPath === opThree){
-            messageTwo = "you need to get out of the basement he locked you in first";
-        } else if(selectPath === opFour){
-            messageTwo = "you didnt have a kid but you can kidnap one >:)";
-        } else if(selectPath === opFive){
-            messageTwo = "nice plot twist now that the writers are getting paid: the kid can take the villain's place someday";
-        } else if (selectPath === opSix){
-            messageTwo = "you had a kid to afford a netflix subscription";
-        } else if(selectPath === opSev){
-            messageTwo = "\"So, where did you get it? \" \"Under a bridge.\"";
-        }
-            var msgTwo = document.getElementById("msgTwo").textContent += messageTwo;
+        var onButtonClickTwo = function(){
+        document.location.reload();
         };
        
         button.addEventListener("click", onButtonClick);
