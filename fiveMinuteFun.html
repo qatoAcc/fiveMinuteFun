@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>I decide ur fate :))</title>
+        <style>
+            #headingOne{
+               text-align: center;
+               font-family: fantasy, "arial";
+               background-color: lightgrey;
+            }
+        </style>
+    </head>
+    <body>
+    <--!--> this is all my original code from Khan Academy; @braden.williams is my user for proof</--!-->
+    <h1 id = "headingOne">i decide your fate =D</h1>
+    <label id = 'labelOne'>Choose your life:</label>
+    <select id = "selectPath">
+        <option id = "optionDef">-----------------------------Life options----------------------------</option>
+        <option id = "opOne">Neutral:
+         not good or bad. pretty boring.
+        </option>
+        <option id = "opTwo">Charity Worker: devote yourself to bringing good into society :)</option>
+        <option id = "opThree">The 'Nice Neighborhood Guy' who is awkwardly nice</option>
+        <option id = "opFour">Local Thug: take candy from children and think you are a crime-lord</option>
+        <option id = 'opFive'>Villain: appear out of a book and give construction workers overtime</option>
+        <option id = 'opSix'>The anime-fanatic: don't touch a blade of grass for 7 years.</option>
+        <option id = 'opSev'>Crackpot: try to time-travel by moving the hand of a clock </option>
+    </select>
+    <br/> 
+    <label id = "label"> Type your character's name 
+    <input id = "name" type = "text"></label>
+    <br/>
+    <button id = "button">See Your Character's Fate</button>
+    <br/>
+    <div id = "msg"></div>
+    
+    <script>
+        var button = document.getElementById("button");
+        var buttonTwo = document.getElementById("buttonTwo");
+        var onButtonClick = function(){
+         var selectPath = document.getElementById("selectPath").value; 
+        var opDef = document.getElementById("optionDef").value;
+        var opOne = document.getElementById("opOne").value;
+        var opTwo = document.getElementById("opTwo").value;
+        var opThree = document.getElementById("opThree").value;
+        var opFour = document.getElementById("opFour").value;
+        var opFive = document.getElementById("opFive").value;
+        var opSix = document.getElementById("opSix").value;
+        var opSev = document.getElementById("opSev").value;
+        
+        var text = document.getElementById("name").value;
+
+        
+        var message;
+        if(selectPath === opDef){
+            message = "Please select a valid class, " + text + " !";
+        } else if(selectPath === opOne){
+            message = "Your character, " + text + ", died from dying";
+        } else if(selectPath === opTwo){
+            message = "Your character, " + text + ", was probably a part of the magical Madrigal family from Encanto. (devoting themselves to society and what - not) They died from Issabella choking them with a grape-vine after ruining her hairdo.";
+        } else if(selectPath === opThree){
+            message = "Your character, " + text + ", died from the pressure of trying to be nice crushing them down like an anvil";
+        } else if(selectPath === opFour){
+            message = "Your character, " + text + ", got so cocky that a major crime-boss skinned" + text + " alive because they were so annoying. they probably deserved it too.";
+        } else if(selectPath === opFive){
+            message = "Your character, " + text + ", died from the comic book writers getting a budget cut and refusing to continue writing the story without good pay.";
+        } else if (selectPath === opSix){
+            message = "Your character, " + text + ", died from a heart-attack from too much cholesterol. they ate too much potato chips while binge-watching attack-on-titan for the 348th time.";
+        } else if(selectPath === opSev){
+            message = "your character, " + text + ", snorted cheeto dust and fell into a river."
+        }
+         var msg = document.getElementById("msg").textContent += message;
+        
+        };
+        button.addEventListener("click", onButtonClick);
+        
+    </script>
+    </body>
+</html>
