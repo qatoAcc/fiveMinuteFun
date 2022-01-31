@@ -79,7 +79,7 @@ g<!DOCTYPE html>
          var msg = document.getElementById("msg").textContent += message;
              };
         var onButtonClickTwo = function(){
-        document.location.reload();
+        window.location.reload(true); //quackify
         };
        
         button.addEventListener("click", onButtonClick);
